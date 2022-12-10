@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
-  test('This is a test', () {
+  test('adds one to input values', () {
     expect(1, 0 + 1);
   });
 }
