@@ -16,9 +16,12 @@ jobs:
         with:
           flutter-version: "3.3.2"
           channel: "stable"
+          
+      - name: Configuring melos and bootstrap project
+        uses: bluefireteam/melos-action@v2
         
       - name: "Flutter Analyze"
-        run: flutter analyze .
+        run: melos run analyze
         
   format:
     timeout-minutes: 15
@@ -33,9 +36,12 @@ jobs:
         with:
           flutter-version: "3.3.2"
           channel: "stable"
+          
+      - name: Configuring melos and bootstrap project
+        uses: bluefireteam/melos-action@v2
         
       - name: "Flutter Format"
-        run: flutter format .
+        run: melos run format -- --set-exit-if-changed
         
   test:
     timeout-minutes: 15
@@ -50,7 +56,10 @@ jobs:
         with:
           flutter-version: "3.3.2"
           channel: "stable"
+          
+      - name: Configuring melos and bootstrap project
+        uses: bluefireteam/melos-action@v2
         
       - name: "Flutter Test"
-        run: flutter test
+        run: melos run test
     
