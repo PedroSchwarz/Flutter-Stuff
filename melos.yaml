@@ -9,7 +9,7 @@ scripts:
     description: Run 'flutter analyze' in all packages
 
   format:
-    run: melos exec -- flutter format .
+    run: melos exec -- dart format .
     description: Run 'flutter format' in all packages
 
   test:

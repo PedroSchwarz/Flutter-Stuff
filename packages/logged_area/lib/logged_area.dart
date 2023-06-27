@@ -1,0 +1,1 @@
+library logged_area;
